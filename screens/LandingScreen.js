@@ -8,6 +8,8 @@ import AudioRecordingSengdingView from "../components/AudioRecordingSengdingView
 import ResultViewer from "../components/ResultViewer";
 import colors from "../res/colors";
 import images from "../res/images";
+import strings from "../res/strings";
+
 
 const LandingScreen = () => {
     const [recording, setRecording] = React.useState()
@@ -79,13 +81,12 @@ const LandingScreen = () => {
             
 
             <AudioRecordingSengdingView                                                                                                                                                                                                                                                                                                                                                   tfgvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvm                                cccccccccccnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 b
-                title={recording? 'Stop Recording' : 'Start Recording'}
+                title={recording? strings.stopRecordText : strings.startRecordText}
                 imageMicrophone={recording? images.microphoneRed : images.microphoneBlue}
-                imageSend={recordings? images.sendIcon : ''}
+                imageSend={recordings? images.sendIconGray : images.sendIconBlue}
                 onRecording={recording? stopRecording : startRecording}
                 view={getRecordingsLines()}
                 onSending={clearRecordings}
-
             />
 
         </SafeAreaView>
